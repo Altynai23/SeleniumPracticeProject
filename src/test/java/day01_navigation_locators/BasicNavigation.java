@@ -20,6 +20,7 @@ public class BasicNavigation {
             - navigate().back()
             - navigate().forward()
             - navigate().refresh()
+
         *
         * */
         // navigate().to("url")
