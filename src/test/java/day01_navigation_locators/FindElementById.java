@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class FindElementById {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         // open chrome and navigate to yahoo
         WebDriverManager.chromedriver().setup();
@@ -22,9 +22,11 @@ public class FindElementById {
         searchBox.sendKeys("Selenium");
         // Locate the search button and click (or submit)
         WebElement searchBtn = driver.findElement(By.id("ybar-sbq"));
-        searchBtn.click();
+        // searchBtn.click();
+        searchBtn.submit();// only work with button in the form !!!!
 
-        
+
+      Thread.sleep(5000);
 
         // quit browser
         driver.quit();
