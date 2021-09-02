@@ -1,4 +1,4 @@
-package com.cybertek.day02_locators_practice;
+package com.cybertek.day02_Locators_practice;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class FindById_byName_ByLinkText {
+public class FindByID_byName_ByLinkText {
 
     public static void main(String[] args) {
 
