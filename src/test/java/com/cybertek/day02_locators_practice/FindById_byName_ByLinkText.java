@@ -1,4 +1,4 @@
-package com.cybertek.gay02_locators_practice;
+package com.cybertek.day02_locators_practice;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
