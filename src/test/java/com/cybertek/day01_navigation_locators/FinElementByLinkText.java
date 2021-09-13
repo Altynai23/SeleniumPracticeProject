@@ -1,12 +1,10 @@
-package day01_navigation_locators;
+package com.cybertek.day01_navigation_locators;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.util.concurrent.AbstractExecutorService;
 
 public class FinElementByLinkText {
 
