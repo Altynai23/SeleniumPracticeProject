@@ -12,12 +12,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
  *
  * WebDriverFactory.get("chrome") ==>> WebDriver object with Chrome Driver
  * WebDriverFactory.get("firefox") ==>> WebDriver object with FireFox Driver
- *
+ * *
  */
-
 public class WebDriverFactory {
 
-    public static WebDriver get(String browserName){
+    public static WebDriver getDriver(String browserName){
 
         WebDriver driver;
 
@@ -40,6 +39,7 @@ public class WebDriverFactory {
 
         return driver ;
     }
+
 
 
 
