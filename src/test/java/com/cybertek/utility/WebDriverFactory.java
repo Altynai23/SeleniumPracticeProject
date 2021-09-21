@@ -20,8 +20,8 @@ public class WebDriverFactory {
 
         WebDriver driver;
 
-        switch (browserName){
-            case "chrome":
+        switch (browserName.toLowerCase() ){
+            case "chrome" :
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
                 break;
@@ -39,7 +39,6 @@ public class WebDriverFactory {
 
         return driver ;
     }
-
 
 
 
