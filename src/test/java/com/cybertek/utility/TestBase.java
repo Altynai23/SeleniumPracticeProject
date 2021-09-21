@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
  * for it's subclasses
  */
 public abstract class TestBase {
-
+    // we want only subclasses of TestBase have access to this.
     protected WebDriver driver ;
     // setting up all driver stuff here directly in @BeforeEach method
     @BeforeEach
@@ -22,6 +22,10 @@ public abstract class TestBase {
 //        driver = new ChromeDriver();
 //        driver.manage().window().maximize();
         driver = WebDriverFactory.getDriver("chrome");
+        // This is how we can set maximum timeout for finding element
+        // in this example it will wait for 10 seconds
+        // if element is found in 1 second ,it will just move on without finishing 10 seconds
+        // Thread.sleep(100000) will always wait for 10 seconds no matter what.
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS) ;
     }
 
