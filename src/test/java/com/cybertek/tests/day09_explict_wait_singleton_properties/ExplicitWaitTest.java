@@ -3,6 +3,7 @@ package com.cybertek.tests.day09_explict_wait_singleton_properties;
 import com.cybertek.utility.TestBase;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -45,4 +46,26 @@ public class ExplicitWaitTest extends TestBase {
 
     }
 
+    @Test
+    public void testByTextToBe() {
+
+        //1. navigate to http://practice.cybertekschool.com/dynamic_loading
+        driver.get(" http://practice.cybertekschool.com/dynamic_loading");
+        //2. Click on Example 7
+        driver.findElement(By.partialLinkText("Example 7")).click();
+
+        WebElement alertArea = driver.findElement(By.id("alert"));
+        System.out.println("alertArea.getText() = " + alertArea.getText());
+
+        WebDriverWait wait = new WebDriverWait(driver, 7);
+        // wait for the image show up
+        wait.until(visibilityOfElementLocated(By.xpath("//img[@alt='square pants']")));
+        // here we had to re-locate the element because
+        // the attributes has changed (colors and stuff) , driver can not find it anymore
+        // element is not in the dom anymore error
+        alertArea = driver.findElement(By.id("alert"));
+
+        System.out.println("alertArea.getText() = " + alertArea.getText());
+
+    }
 }
