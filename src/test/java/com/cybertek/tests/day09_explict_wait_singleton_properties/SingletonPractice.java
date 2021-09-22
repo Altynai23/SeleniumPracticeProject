@@ -1,11 +1,23 @@
 package com.cybertek.tests.day09_explict_wait_singleton_properties;
 
+import com.cybertek.utility.Driver;
 import org.junit.jupiter.api.Test;
 
 public class SingletonPractice {
 
     @Test
-    public void testSingleton() {
+    public void testOutDriverUtilityClass() {
+
+        Driver.getDriver();
+//        Driver.getDriver();
+//        Driver.getDriver();
+//        Driver.getDriver();
+
+
+    }
+
+    @Test
+    public void testSingleton(){
 
 
 //        Singleton s1 = new Singleton();
@@ -28,5 +40,12 @@ public class SingletonPractice {
          * You already have object , use that existing object
          */
 
+
+
     }
+
 }
+
+
+
+
