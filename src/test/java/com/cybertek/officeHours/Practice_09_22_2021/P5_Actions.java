@@ -40,16 +40,12 @@ public class P5_Actions extends TestBase {
 
 
 
-
-
-
-
     }
 
 
     @Test
     public void dragAndDrop() {
-        Actions actions=new Actions(driver);
+        Actions actions = new Actions(driver);
         driver.get("https://www.globalsqa.com/demo-site/draganddrop/");
 
         WebElement frame = driver.findElement(By.cssSelector(".demo-frame.lazyloaded"));
