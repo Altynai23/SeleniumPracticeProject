@@ -11,6 +11,9 @@ import java.util.concurrent.TimeUnit;
  * This class is meant to be super class
  * to provide driver set up and closing driver
  * for it's subclasses
+ *
+ * * // Now you can try to replace driver with
+ *  * Driver.getDriver() so it can be same driver everywhere wherever you use
  */
 public abstract class TestBase {
     // we want only subclasses of TestBase have access to this.
@@ -30,8 +33,11 @@ public abstract class TestBase {
     }
 
     @AfterEach
-    public void closeBrowser(){
-        driver.quit();
+    public void closeBrowser(){ // you can call it anything you want
+
+        //driver.quit();
+        // quit the browser + make it null, so we can get new one when ask for it again
+        Driver.closeBrowser();
     }
 
 
