@@ -39,6 +39,18 @@ public class GoogleHomePage {
 
     }
 
+    /**
+     * Check if you are at google home page by checking the title
+     * @return true if title is Google false if not
+     */
+
+    public boolean isAt(){
+
+        return  Driver.getDriver().getTitle().equals("Google") ;
+
+    }
+
+
 
 
 }
